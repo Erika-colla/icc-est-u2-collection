@@ -88,13 +88,13 @@ public class Maps {
     public Map<Person, String> contruirTreeMapPersonsObj() {
   
     Map<Person, String> treePersonObj = new java.util.TreeMap<>();
-    List<Person> list=new ArrayList<>();
+    List<Person> list = new ArrayList<>();
     list.add(new Person(12345, 30, "Ana"));
     list.add(new Person(123467, 30, "luis"));
     list.add(new Person(123478, 30, "jose"));
     list.add(new Person(123489, 30, "diego")); 
     list.add(new Person(1234910, 30, "andres"));
     return treePersonObj;
+    }
 }
-}
-}
+

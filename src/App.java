@@ -1,13 +1,13 @@
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
-
 import Structures.Sets.Sets;
 import Structures.controller.MaquinaController;
 import Structures.maps.EjerciciosMapas;
 import Structures.models.Maquina;
 import Structures.models.Node;
 import Structures.models.Person;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -19,9 +19,39 @@ public class App {
 
     public static void runEjercicios() {
         EjerciciosMapas ejercicios = new EjerciciosMapas();
-        ejercicios.contarDuplicados(null);
-        //Listado de 0 al 30 , 50 numeros
         
+        //Listado de 0 al 30 , 50 numeros
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+        11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+        11, 12, 13, 14, 15, 16, 17, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,18, 19, 20,
+        11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+
+        Map<Integer, Integer> res = ejercicios.contarDuplicados(list);
+        System.out.println("--- Ejercicio 1 ---");
+        System.out.println(res);
+
+        List<Integer> list2 = Arrays.asList(
+        4, 5, 1, 2, 5, 4, 3, 2, 1, 6,
+        7, 3, 8, 9, 6, 7, 10);
+
+        System.out.println("--- Ejercicio 2 ---");
+        System.out.println(ejercicios.elementoNoRepetido(list2));
+
+        List<String[]> entradas = List.of(
+        new String[]{"Ana", "80"},
+        new String[]{"Luis", "90"},
+        new String[]{"Carlos", "70"},
+        new String[]{"Ana", "85"},
+        new String[]{"Sofia", "95"},
+        new String[]{"Luis", "88"},
+        new String[]{"Pedro", "60"},
+        new String[]{"Maria", "75"}
+        );
+
+        System.out.println("--- Ejercicio 3 ---");
+        System.out.println(ejercicios.elementoNoRepetido(list2));
     }
 
     public static void runSets() {
