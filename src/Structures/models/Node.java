@@ -1,4 +1,4 @@
-package models;
+package Structures.models;
 
 public class Node<T> {
     private T value;
