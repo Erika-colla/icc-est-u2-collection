@@ -5,6 +5,7 @@ import Structures.models.Maquina;
 import Structures.models.Node;
 import Structures.models.Person;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -29,6 +30,7 @@ public class App {
         11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
 
         Map<Integer, Integer> res = ejercicios.contarDuplicados(list);
+        System.out.println();
         System.out.println("--- Ejercicio 1 ---");
         System.out.println(res);
 
@@ -36,6 +38,7 @@ public class App {
         4, 5, 1, 2, 5, 4, 3, 2, 1, 6,
         7, 3, 8, 9, 6, 7, 10);
 
+        System.out.println();
         System.out.println("--- Ejercicio 2 ---");
         System.out.println(ejercicios.elementoNoRepetido(list2));
 
@@ -50,8 +53,26 @@ public class App {
         new String[]{"Maria", "75"}
         );
 
+        System.out.println();
         System.out.println("--- Ejercicio 3 ---");
-        System.out.println(ejercicios.elementoNoRepetido(list2));
+        System.out.println(ejercicios.rankingPorPuntaje(entradas));
+
+        System.out.println();
+        System.out.println("--- Ejercicio 4 ---");
+
+        Map<String, Integer> datosCarrera = new HashMap<>();
+        datosCarrera.put("Computacion-Ana", 85);
+        datosCarrera.put("Computacion-Luis", 90);
+        datosCarrera.put("Computacion-Carlos", 78);
+
+        datosCarrera.put("Electronica-Sofia", 88);
+        datosCarrera.put("Electronica-Pedro", 92);
+        datosCarrera.put("Electronica-Maria", 80);
+
+        datosCarrera.put("Mecanica-Juan", 75);
+        datosCarrera.put("Mecanica-Elena", 82);
+
+        ejercicios.maximoPorCarrera(datosCarrera);
     }
 
     public static void runSets() {
